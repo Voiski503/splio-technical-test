@@ -9,10 +9,12 @@ Below you'll find the class "EmailDesign" with the function "isEqual" that is cu
 
 ##To do:
 
-The goal of this exercise is to code the function "isEqual" to compare the expected EmailDesign to the EmailDesign we received 
+The goal of this exercise is to code the function "isEqual" to compare the expected EmailDesign to the EmailDesign we received.
+
 You should : 
 - Use only the JSoup, JUnit and log4j dependencies
 - Log what you think is necessary with the Logger 
+
 You can either: 
 - Rewrite the class in Java 
 - Code the isEqual() function right here in Kotlin
