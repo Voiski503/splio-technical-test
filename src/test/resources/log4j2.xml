@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="TRACE">
+    <CustomLevels>
+        <CustomLevel name="NOTICE" intLevel="450"/>
+        <CustomLevel name="VERBOSE" intLevel="550"/>
+    </CustomLevels>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="%highlight{%d{HH:mm:ss.SSS} [%-5level] %logger{36} - %msg%n}{FATAL=red blink, ERROR=red, WARN=magenta, INFO=cyan, NOTICE=cyan ,DEBUG=green, VERBOSE=white, TRACE=white}"/>
+        </Console>
+        <File name="OutputFile" fileName="target/journal.log" immediateFlush="true" append="true">
+            <layout class="org.apache.log4j.PatternLayout">
+                <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n"/>
+            </layout>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="DEBUG">
+            <AppenderRef ref="Console" level="DEBUG"/>
+            <AppenderRef ref="OutputFile" level="DEBUG"/>
+        </Root>
+    </Loggers>
+</Configuration>
